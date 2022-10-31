@@ -1,0 +1,32 @@
+mixin section-process
+    -
+        var cards = [
+            {
+                ico: 'assets/img/Ico_1.svg',
+                title: 'Set up an account',
+                desc: 'Download the app for free, sign up and verify your account.'
+            },
+            {
+                ico: 'assets/img/Ico_2.svg',
+                title: 'Apply for a loan',
+                desc: 'Apply for a loan and our technology will run a credit score and decide if you are qualified.'
+            },
+            {
+                ico: 'assets/img/Ico_3.svg',
+                title: 'Get your cash',
+                desc: 'If you qualify, your loan will be disbursed to your wallet.'
+            }
+        ]
+
+    .process
+        .process__content
+            .process__content-title= 'How it works'
+            .process__content-cards
+                each card in cards
+                    .card
+                        .card__ico
+                            img(src=card.ico)
+                        .card__title= card.title
+                        .card__desc= card.desc
+                    .card__next
+                        img(src="assets/img/Next_ico.svg")

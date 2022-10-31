@@ -1,0 +1,46 @@
+.about {
+	height: 550px;
+	width: 100%;
+	font-family: 'Work Sans', sans-serif;
+
+	&__content {
+		margin: 130px 200px 0;
+		height: 470px;
+		display: flex;
+
+		&-img {
+
+			img {
+				height: 400px;
+			}
+		}
+
+		&-info {
+			margin-left: 150px;
+		}
+
+		&-title {
+			margin-top: 65px;
+			width: 400px;
+			line-height: 50px;
+			font-size: 45px;
+		}
+
+		&-desc {
+			margin-top: 30px;
+			line-height: 35px;
+			font-size: 24px;
+		}
+
+		&-btns {
+			display: flex;
+			margin-top: 30px;
+
+			.btn {
+				&:nth-child(1) {
+					margin-right: 8px;
+				}
+			}
+		}
+	}
+}

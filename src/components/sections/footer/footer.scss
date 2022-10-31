@@ -1,0 +1,28 @@
+.footer {
+	height: 230px;
+	font-family: 'Work Sans', sans-serif;
+
+	&__content {
+		margin-top: 50px;
+		height: 100%;
+		padding: 0 100px;
+		display: flex;
+		justify-content: space-between;
+	}
+
+	&__addr {
+		width: 170px;
+		line-height: 30px;
+	}
+
+	&__contact {
+		width: 150px;
+		line-height: 30px;
+	}
+
+	&__powered {
+		width: 260px;
+		line-height: 30px;
+
+	}
+}

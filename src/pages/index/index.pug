@@ -1,0 +1,19 @@
+//- Layout
+extends /layout/main
+
+include /components/sections/main/main
+include /components/sections/about/about
+include /components/sections/process/process
+include /components/sections/download/download
+
+block head
+    title= 'Irorun'
+
+block content
+    +section-main
+
+    +section-about
+
+    +section-process
+
+    +section-download

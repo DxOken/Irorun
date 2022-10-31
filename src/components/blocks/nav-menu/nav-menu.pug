@@ -1,0 +1,11 @@
+mixin nav-menu()
+    -
+        var list = [
+            {text: 'Home'},
+            {text: 'Contact'},
+            {text: 'Privacy'},
+        ]
+    .nav-bar
+        ul.nav-bar__list
+            each item in list
+                li.nav-bar__list-item= item.text

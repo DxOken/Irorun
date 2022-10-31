@@ -1,11 +1,12 @@
 mixin nav-menu()
     -
         var list = [
-            {text: 'Home'},
-            {text: 'Contact'},
-            {text: 'Privacy'},
+            {text: 'Home', href:'#home'},
+            {text: 'Contact', href:'#'},
+            {text: 'Privacy', href:'#footer'},
         ]
     .nav-bar
         ul.nav-bar__list
             each item in list
-                li.nav-bar__list-item= item.text
+                li.nav-bar__list-item
+                    a(href=item.href)= item.text

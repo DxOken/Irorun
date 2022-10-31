@@ -1,28 +1,48 @@
 .footer {
-	height: 230px;
 	font-family: 'Work Sans', sans-serif;
 
+	@include _979 {
+		height: 500px;
+	};
+
 	&__content {
-		margin-top: 50px;
+		margin: 50px 0;
 		height: 100%;
-		padding: 0 100px;
+		padding: 0 res(10, 320, 100, 1920);
 		display: flex;
 		justify-content: space-between;
+
+		@include _979 {
+			flex-direction: column;
+			justify-content: space-between;
+			align-items: center;
+		};
 	}
 
 	&__addr {
 		width: 170px;
 		line-height: 30px;
+		
+		@include _979 {
+			text-align: center;
+		};
 	}
 
 	&__contact {
 		width: 150px;
 		line-height: 30px;
+
+		@include _979 {
+			text-align: center;
+		};
 	}
 
 	&__powered {
 		width: 260px;
 		line-height: 30px;
 
+		@include _979 {
+			text-align: center;
+		};
 	}
 }

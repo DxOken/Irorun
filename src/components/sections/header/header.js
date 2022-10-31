@@ -1,4 +1,4 @@
-const menu = document.querySelector('')
+const menu = document.querySelector('.nav-bar__list')
 
 if (window.location.hash === '' || window.location.hash === '#home') {
     menu.firstElementChild.classList.add('selected')
@@ -9,3 +9,14 @@ if (window.location.hash === '' || window.location.hash === '#home') {
         }
     })
 }
+
+menu.childNodes.forEach((menuItem) => {
+    menuItem.addEventListener('click', () => {
+        menu.childNodes.forEach((item) => {
+            item.classList.remove('selected')
+        })
+        menuItem.classList.add('selected')
+        window.location.replace(menuItem.firstChild.href)
+
+    })
+})

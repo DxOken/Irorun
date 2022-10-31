@@ -1,24 +1,24 @@
 .download {
-	height: 370px;
 	background-color: #31C5A1;
 	font-family: 'Work Sans', sans-serif;
 
 
 	&__content {
 		width: 100%;
+		padding: res(70, 320, 130, 1920) 0;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
 	}
 
 	&__title {
-		padding-top: 130px;
-		font-size: 30px;
-		width: 560px;
-		margin: 0 auto;
-		line-height: 35px;
+		font-size: res(20, 320, 30, 1920);
+		width: res(320, 320, 560, 1920);
+		line-height: perc(35, 30);
 		text-align: center;
 	}
 
 	&__btns {
-		//margin-top: 40px;
 		width: fit-content;
 		margin: 40px auto 0;
 

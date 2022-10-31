@@ -1,15 +1,15 @@
 .main {
 	position: relative;
-	height: 600px;
 	width: 100%;
 	padding-top: 90px;
 	font-family: 'Work Sans', sans-serif;
+	overflow-x: clip;
 
 
 	&__contact {
 		position: absolute;
 		left: 0;
-		top: 90px;
+		top: 110px;
 		height: 108px;
 		width: 36px;
 		background-color: #39CDCC;
@@ -20,6 +20,7 @@
 		border-bottom-right-radius: 6px;
 
 		user-select: none;
+
 		
 		&:hover {
 			cursor: pointer;
@@ -36,49 +37,51 @@
 	&__content {
 		position: relative;
 		display: flex;
-		margin: 0 150px;
+		justify-content: space-between;
+		margin: 0 res(10, 320, 200, 1920);
 		height: 100%;
 
 		&-info {
-			margin-left: 50px;
-		}
+			margin-top: res(160, 320, 0, 1920);
+			margin-left: res(0, 320, 100, 1920);
 
-		&-title {
-			margin-top: 140px;
-			width: 350px;
-			line-height: 60px;
-			font-size: 55px;
-		}
+			&-title {
+				margin-top: 140px;
+				width: res(200, 320, 350, 1920);
+				line-height: perc(60, 55);
+				font-size: res(34, 320, 55, 1920);
+			}
 
-		&-desc {
-			margin-top: 30px;
-			width: 430px;
-			line-height: 35px;
-			font-size: 24px;
-		}
+			&-desc {
+				margin-top: res(20, 320, 30, 1920);
+				width: res(250, 320, 400, 1920);
+				line-height: perc(35, 24);
+				font-size: res(16, 320, 24, 1920);
+			}
 
-		&-btns {
-			margin-top: 30px;
+			&-btns {
+				margin-top: res(20, 320, 30, 1920);
 
-			.btn {
-				&:nth-child(1) {
-					margin-right: 8px;
+				.btn {
+					&:nth-child(1) {
+						margin-right: res(3, 320, 20, 1920);
+					}
+
 				}
 
 			}
-
 		}
 
 		&-img {
-			position: absolute;
-			right: 0;
-			bottom: 0;
-			z-index: 101;
-
 			img {
-				height: res(300, 320,560, 1400);
-
+				height: res(300, 320, 700, 1920);
 			}
+
+			@include _1170 {
+				position: absolute;
+				right: res(-60, 320, 0, 1170);
+				top: res(20, 320, 0, 1170);
+			};
 		}
 	}
 }

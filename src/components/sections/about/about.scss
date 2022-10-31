@@ -1,35 +1,53 @@
 .about {
-	height: 550px;
 	width: 100%;
 	font-family: 'Work Sans', sans-serif;
+	overflow-x: clip;
 
 	&__content {
-		margin: 130px 200px 0;
+		margin: res(70, 320, 130, 1920) res(10, 320, 250, 1920) res(130, 320, 130, 1920);
 		height: 470px;
 		display: flex;
+		justify-content: space-between;
+		position: relative;
+
 
 		&-img {
-
 			img {
-				height: 400px;
+				height: res(300, 320, 500, 1920);
 			}
+
+			@include _1170 {
+				margin-left: res(-90, 480, 0, 1170);
+				margin-top: res(-50, 480, 0, 1170);
+			};
+
+			@include _480 {
+				margin-left: res(0, 320, -90, 480);
+				margin-top: res(0, 320, -50, 480);
+			};
 		}
 
 		&-info {
-			margin-left: 150px;
+			margin-top: 70px;
+
+			@include _1170 {
+				position: absolute;
+				right: res(-100, 320, -100, 1170);
+				top: res(250, 320, 0, 1170);
+			};
 		}
 
 		&-title {
 			margin-top: 65px;
 			width: 400px;
-			line-height: 50px;
-			font-size: 45px;
+			line-height: perc(60, 55);
+			font-size: res(34, 320, 55, 1920);
 		}
 
 		&-desc {
 			margin-top: 30px;
-			line-height: 35px;
-			font-size: 24px;
+			line-height: perc(35, 24);
+			font-size: res(16, 320, 24, 1920);
 		}
 
 		&-btns {

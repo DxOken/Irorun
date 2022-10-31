@@ -1,9 +1,13 @@
 .nav-bar {
 	width: 100%;
 	height: 90px;
-	margin-left: 165px;
 	display: flex;
 	align-items: center;
+	flex-wrap: wrap;
+
+	@include _768 {
+		height: 60px;
+	};
 
 	&__list {
 		padding: 0;
@@ -12,11 +16,26 @@
 
 		&-item {
 			margin-right: 40px;
+
+			font-size: res(14, 320, 20, 1920);
+
+			&:last-child {
+				margin-right: 0;
+			}
+
+			a {
+				text-decoration: none;
+				color: inherit;
+			}
 			
 			&:hover {
 				cursor: pointer;
 				color: #0082F3;
 			} 
+			
+			&.selected {
+				color: #0082F3;
+			}
 		}
 	}
 }

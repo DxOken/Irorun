@@ -4,7 +4,7 @@
 	width: 100%;
 	padding: 0 res(10, 320, 150, 1920);
 	display: flex;
-	justify-content: space-between;
+	justify-content: start;
 	background-color: #fff;
 	position: fixed;
 	z-index: 100;
@@ -27,5 +27,13 @@
 		@include _768 {
 			margin-top: 10px;
 		}
+	}
+
+	&__menu {
+		margin-left: res(30, 768, 165, 1920);
+
+		@include _768 {
+			margin-left: 0;
+		};
 	}
 }
